@@ -1,4 +1,13 @@
 v 4
-file . "alu.vhdl" "8495c3ba434430f6de853e9339ad5ea5b3e2533c" "20250612011013.136":
-  entity alu at 4( 73) + 0 on 11;
-  architecture behavioral of alu at 18( 430) + 0 on 12;
+file . "alu_tb_1bit.vhdl" "1b44697d5f93a0aa42db1f2d950dae4dad49fcd4" "20250612152502.628":
+  entity alu_tb_1bit at 4( 89) + 0 on 31;
+  architecture test of alu_tb_1bit at 10( 186) + 0 on 32;
+file . "alu.vhdl" "f6b3a56475e15c57bca34824929e20ad90df7451" "20250612123614.338":
+  entity alu at 2( 19) + 0 on 23;
+  architecture behavioral of alu at 16( 348) + 0 on 24;
+file . "alu_4bit.vhdl" "d999f91245923ce59a13d9eab3714a12f2d754e2" "20250612122715.777":
+  entity alu_4bit at 4( 97) + 0 on 13;
+  architecture structural of alu_4bit at 18( 493) + 0 on 14;
+file . "alu_tb_4bit.vhdl" "e16287f05b9e6aa462cd13ebfd399934271e0110" "20250612123305.105":
+  entity alu_tb_4bit at 4( 78) + 0 on 19;
+  architecture test of alu_tb_4bit at 10( 175) + 0 on 20;
