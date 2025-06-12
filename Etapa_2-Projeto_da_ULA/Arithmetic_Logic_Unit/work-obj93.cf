@@ -1,0 +1,4 @@
+v 4
+file . "alu.vhdl" "8495c3ba434430f6de853e9339ad5ea5b3e2533c" "20250612011013.136":
+  entity alu at 4( 73) + 0 on 11;
+  architecture behavioral of alu at 18( 430) + 0 on 12;
