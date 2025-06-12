@@ -11,9 +11,8 @@ Este projeto foi desenvolvido como parte da disciplina de Arquitetura de Computa
 - **Half Adder**: circuito combinacional que soma dois bits (`a` e `b`) e gera duas saídas:
   - `y` (soma dos bits, operação XOR)
   - `carry_o` (transporte ou carry, operação AND)
-## Estrutura do Projeto
 
-## Estrutura do projeto
+## Estrutura do projeto:
 ```
 Arquitetura_de_Computadores/
 ├── Etapa_1-VHDL_And_e_Half_Adder/
