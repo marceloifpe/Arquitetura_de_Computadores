@@ -129,7 +129,7 @@ Caso 4: Quando Operacao = "10" (SUB)
 O que você está testando: A subtração 1−1. (Assumindo CarryIn = 1).
 Cálculo mental: 1−1=0. que em binário é 00 (Resultado 0 carry-out 1).
 
-Esses são algums exemplos da combinações mais comuns, mas no total são 8 possibilidades para ADD
+Esses são alguns exemplos de combinações mais comuns, mas no total são 8 possibilidades para ADD
 e SUB também é 8 para cada operação matemática, já para AND E OR 4 possibilidades cada operação
 lógica.
 
