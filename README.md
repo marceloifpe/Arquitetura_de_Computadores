@@ -130,8 +130,58 @@ O que você está testando: A subtração 1−1. (Assumindo CarryIn = 1).
 Cálculo mental: 1−1=0. que em binário é 00 (Resultado 0 carry-out 1).
 
 Esses são algums exemplos da combinações mais comuns, mas no total são 8 possibilidades para ADD
-e SUB, já para AND E OR 4 possibilidades cada operação lógica.
-```
+e SUB também é 8 para cada operação matemática, já para AND E OR 4 possibilidades cada operação
+lógica.
+
+Tabela Verdade Completa da ULA de 1 Bit
+Esta seção detalha o comportamento esperado da ULA para todas as combinações de entradas possíveis.
+
+Operação AND (Seletor = "00")
+O CarryIn é ignorado para operações lógicas.
+
+| A | B | Resultado | CarryOut |
+|:-:|:-:|:-----------:|:----------:|
+| 0 | 0 |      0      |      0     |
+| 0 | 1 |      0      |      0     |
+| 1 | 0 |      0      |      0     |
+| 1 | 1 |      1      |      0     |
+
+Operação OR (Seletor = "11")
+O CarryIn é ignorado para operações lógicas.
+
+| A | B | Resultado | CarryOut |
+|:-:|:-:|:-----------:|:----------:|
+| 0 | 0 |      0      |      0     |
+| 0 | 1 |      1      |      0     |
+| 1 | 0 |      1      |      0     |
+| 1 | 1 |      1      |      0     |
+
+Operação ADD (Seletor = "01")
+| A | B | CarryIn | Resultado | CarryOut |
+|:-:|:-:|:---------:|:-----------:|:----------:|
+| 0 | 0 |     0     |      0      |      0     |
+| 0 | 0 |     1     |      1      |      0     |
+| 0 | 1 |     0     |      1      |      0     |
+| 0 | 1 |     1     |      0      |      1     |
+| 1 | 0 |     0     |      1      |      0     |
+| 1 | 0 |     1     |      0      |      1     |
+| 1 | 1 |     0     |      0      |      1     |
+| 1 | 1 |     1     |      1      |      1     |
+
+Operação SUB (Seletor = "10")
+Lembre-se que a lógica é Resultado = A XOR (NOT B) XOR CarryIn.
+Um CarryOut=0 indica que houve um "empréstimo" (borrow).
+
+| A | B | CarryIn | Resultado | CarryOut |
+|:-:|:-:|:---------:|:-----------:|:----------:|
+| 0 | 0 |     0     |      1      |      0     |
+| 0 | 0 |     1     |      0      |      1     |
+| 0 | 1 |     0     |      0      |      0     |
+| 0 | 1 |     1     |      1      |      0     |
+| 1 | 0 |     0     |      0      |      1     |
+| 1 | 0 |     1     |      1      |      1     |
+| 1 | 1 |     0     |      1      |      0     |
+| 1 | 1 |     1     |      0      |      1     |
 
 ## Autor:
 
