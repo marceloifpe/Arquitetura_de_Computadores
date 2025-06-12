@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "▶️ Compilar e simular AND gate",
+            "type": "shell",
+            "command": "ghdl -a and.vhdl; ghdl -a and_tb.vhdl; ghdl -e and_tb; ghdl -r and_tb --vcd=and_wave.vcd; gtkwave and_wave.vcd",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "▶️ Compilar e simular Half Adder",
+            "type": "shell",
+            "command": "ghdl -a half_adder.vhdl; ghdl -a half_adder_tb.vhdl; ghdl -e half_adder_tb; ghdl -r half_adder_tb --vcd=ha_wave.vcd; gtkwave ha_wave.vcd",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

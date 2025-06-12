@@ -1,5 +1,6 @@
 # Arquitetura_de_Computadores
 Repositorio para as atividades desenvolvidas durante a disciplina.
+Professor: Waldemar Neto.
 
 # Projeto ULA - Porta AND e Half Adder em VHDLMore actions
 # Projeto ULA - Portas Lógicas, Half Adder e ALU em VHDL
@@ -185,5 +186,5 @@ Um CarryOut=0 indica que houve um "empréstimo" (borrow).
 
 ## Autor:
 
-- Marcelo Augusto de Barros Araújo
+- [Marcelo Augusto](https://github.com/marceloifpe)
 

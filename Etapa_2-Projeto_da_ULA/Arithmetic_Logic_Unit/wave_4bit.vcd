@@ -1,5 +1,5 @@
 $date
-  Thu Jun 12 09:37:39 2025
+  Thu Jun 12 19:32:26 2025
 $end
 $version
   GHDL v0
@@ -11,75 +11,108 @@ $scope module standard $end
 $upscope $end
 $scope module std_logic_1164 $end
 $upscope $end
+$scope module numeric_std $end
+$upscope $end
 $scope module alu_tb_4bit $end
-$var reg 4 ! s_a[3:0] $end
-$var reg 4 " s_b[3:0] $end
-$var reg 4 # s_resultado[3:0] $end
-$var reg 1 $ s_carryin $end
-$var reg 1 % s_carryout $end
-$var reg 2 & s_operacao[1:0] $end
+$var reg 4 ! a[3:0] $end
+$var reg 4 " b[3:0] $end
+$var reg 4 # result[3:0] $end
+$var reg 1 $ carry_in $end
+$var reg 1 % carry_out $end
+$var reg 2 & operation[1:0] $end
 $scope module uut $end
 $var reg 4 ' a[3:0] $end
 $var reg 4 ( b[3:0] $end
-$var reg 1 ) carryin $end
-$var reg 2 * operacao[1:0] $end
-$var reg 4 + resultado[3:0] $end
-$var reg 1 , carryout $end
-$var reg 3 - s_carry_chain[2:0] $end
+$var reg 1 ) carry_in $end
+$var reg 2 * operation[1:0] $end
+$var reg 4 + result[3:0] $end
+$var reg 1 , carry_out $end
+$var reg 5 - c[4:0] $end
 $scope module alu0 $end
 $var reg 1 . a $end
 $var reg 1 / b $end
-$var reg 1 0 carryin $end
-$var reg 2 1 operacao[1:0] $end
-$var reg 1 2 resultado $end
-$var reg 1 3 carryout $end
+$var reg 1 0 carry_in $end
+$var reg 2 1 operation[1:0] $end
+$var reg 1 2 result $end
+$var reg 1 3 carry_out $end
 $upscope $end
 $scope module alu1 $end
 $var reg 1 4 a $end
 $var reg 1 5 b $end
-$var reg 1 6 carryin $end
-$var reg 2 7 operacao[1:0] $end
-$var reg 1 8 resultado $end
-$var reg 1 9 carryout $end
+$var reg 1 6 carry_in $end
+$var reg 2 7 operation[1:0] $end
+$var reg 1 8 result $end
+$var reg 1 9 carry_out $end
 $upscope $end
 $scope module alu2 $end
 $var reg 1 : a $end
 $var reg 1 ; b $end
-$var reg 1 < carryin $end
-$var reg 2 = operacao[1:0] $end
-$var reg 1 > resultado $end
-$var reg 1 ? carryout $end
+$var reg 1 < carry_in $end
+$var reg 2 = operation[1:0] $end
+$var reg 1 > result $end
+$var reg 1 ? carry_out $end
 $upscope $end
 $scope module alu3 $end
 $var reg 1 @ a $end
 $var reg 1 A b $end
-$var reg 1 B carryin $end
-$var reg 2 C operacao[1:0] $end
-$var reg 1 D resultado $end
-$var reg 1 E carryout $end
+$var reg 1 B carry_in $end
+$var reg 2 C operation[1:0] $end
+$var reg 1 D result $end
+$var reg 1 E carry_out $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
+b1111 !
+b0000 "
+b0000 #
+0$
+0%
+b00 &
+b1111 '
+b0000 (
+0)
+b00 *
+b0000 +
+0,
+b00000 -
+1.
+0/
+00
+b00 1
+02
+03
+14
+05
+06
+b00 7
+08
+09
+1:
+0;
+0<
+b00 =
+0>
+0?
+1@
+0A
+0B
+b00 C
+0D
+0E
+#10000000
 b0101 !
 b0011 "
 b1000 #
-0$
-0%
 b01 &
 b0101 '
 b0011 (
-0)
 b01 *
 b1000 +
-0,
-b111 -
-1.
+b01110 -
 1/
-00
 b01 1
-02
 13
 04
 15
@@ -87,87 +120,65 @@ b01 1
 b01 7
 08
 19
-1:
-0;
 1<
 b01 =
 0>
 1?
 0@
-0A
 1B
 b01 C
 1D
-0E
 #20000000
 b1100 !
-b0101 "
-b0111 #
-1$
+b0010 "
+b1001 #
 1%
 b10 &
 b1100 '
-b0101 (
-1)
+b0010 (
 b10 *
-b0111 +
+b1001 +
 1,
-b000 -
+b11000 -
 0.
-10
+0/
 b10 1
 12
 03
-05
 06
 b10 7
-18
+08
 09
-1;
 0<
 b10 =
-1>
-0?
-1@
-0B
-b10 C
-0D
-1E
-#40000000
-b1101 !
-b1011 "
-b1001 #
-0$
-0%
-b00 &
-b1101 '
-b1011 (
-0)
-b00 *
-b1001 +
-0,
-1.
-00
-b00 1
-15
-b00 7
-08
-0;
-b00 =
 0>
-1A
-b00 C
-1D
-0E
-#60000000
+1@
+b10 C
+1E
+#30000000
+b1010 !
+b0101 "
 b1111 #
+0%
 b11 &
+b1010 '
+b0101 (
 b11 *
 b1111 +
+0,
+b00000 -
+1/
 b11 1
+14
+05
 b11 7
 18
+0:
+1;
 b11 =
 1>
+0?
+0B
 b11 C
-#80000000
+0E
+#40000000
