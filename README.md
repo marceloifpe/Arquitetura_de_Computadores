@@ -26,7 +26,6 @@ Arquitetura_de_Computadores/
 ├── Etapa_2-Projeto_da_ULA/Arithmetic_Logic_Unit/
 │   ├── alu.vhdl
 │   ├── alu_tb_1bit.vhdl
-│   ├── alu_4bit.vhdl
 │   ├── alu_tb_4bit.vhdl
 
 ```
@@ -68,6 +67,37 @@ Saídas:
 Arquivos:
 - `half_adder.vhdl`: implementação do meio somador
 - `half_adder_tb.vhdl`: testbench para simulação
+
+🚀 Como Simular com Tarefas do VS Code
+Este projeto está configurado para usar o Task Runner do Visual Studio Code, o que automatiza todo o processo de compilação e simulação com um único comando.
+
+Pré-requisitos
+Visual Studio Code instalado.
+GHDL e GTKWave instalados e acessíveis pelo terminal do seu sistema (adicionados ao PATH).
+Fluxo de Trabalho por Etapa
+Este projeto utiliza tarefas locais para cada etapa. Para que funcionem, você deve abrir a pasta da etapa específica em que deseja trabalhar, e não a pasta raiz Arquitetura_de_Computadores.
+
+Exemplo: Rodando as Tarefas da Etapa 1
+Abra a Pasta da Etapa no VS Code:
+
+No menu do VS Code, vá em Arquivo -> Abrir Pasta...
+Navegue e selecione a pasta da primeira etapa: Etapa_1-VHDL_And_e_Half_Adder.
+Execute a Tarefa de Simulação:
+Com a pasta correta aberta, você tem duas maneiras de rodar as tarefas:
+
+Método 1: Atalho Rápido (Roda a tarefa padrão)
+
+Pressione Ctrl + Shift + B.
+Isso executará a tarefa padrão, que no caso é "▶️ Compilar e simular AND gate".
+Método 2: Paleta de Comandos (Permite escolher a tarefa)
+
+Pressione Ctrl + Shift + P para abrir a Paleta de Comandos.
+Comece a digitar Run Task e selecione a opção Tasks: Run Task.
+Uma lista com as tarefas disponíveis para esta etapa aparecerá. Escolha uma e pressione Enter:
+▶️ Compilar e simular AND
+▶️ Compilar e simular Half Adder
+O que Acontece Depois?
+Ao executar a tarefa, um terminal integrado aparecerá no VS Code, executará todos os comandos de compilação e simulação em sequência e, ao final, a janela do GTKWave abrirá automaticamente com as formas de onda para sua análise.
 
 ## Parte 3 – ULA de 1 e 4 bits
 
@@ -183,6 +213,37 @@ Um CarryOut=0 indica que houve um "empréstimo" (borrow).
 | 1 | 0 |     1     |      1      |      1     |
 | 1 | 1 |     0     |      1      |      0     |
 | 1 | 1 |     1     |      0      |      1     |
+
+🚀 Como Simular com Tarefas do VS Code
+Este projeto está configurado para usar o Task Runner do Visual Studio Code, o que automatiza todo o processo de compilação e simulação com um único comando.
+
+Pré-requisitos
+Visual Studio Code instalado.
+GHDL e GTKWave instalados e acessíveis pelo terminal do seu sistema (adicionados ao PATH).
+Fluxo de Trabalho por Etapa
+Este projeto utiliza tarefas locais para cada etapa. Para que funcionem, você deve abrir a pasta da etapa específica em que deseja trabalhar, e não a pasta raiz Arquitetura_de_Computadores.
+
+Exemplo: Rodando as Tarefas da Etapa 2 (ULA)
+Abra a Pasta da Etapa no VS Code:
+
+No menu do VS Code, vá em Arquivo -> Abrir Pasta...
+Navegue e selecione a pasta da segunda etapa: Etapa_2-Projeto_da_ULA/Arithmetic_Logic_Unit.
+Execute a Tarefa de Simulação:
+Com a pasta correta aberta, você tem duas maneiras de rodar as tarefas:
+
+Método 1: Atalho Rápido (Roda a tarefa padrão)
+
+Pressione Ctrl + Shift + B.
+Isso executará a tarefa padrão, que no caso é "▶️ Simular e Abrir ULA 1-bit".
+Método 2: Paleta de Comandos (Permite escolher a tarefa)
+
+Pressione Ctrl + Shift + P para abrir a Paleta de Comandos.
+Comece a digitar Run Task e selecione a opção Tasks: Run Task.
+Uma lista com as tarefas disponíveis para esta etapa aparecerá. Escolha uma e pressione Enter:
+▶️ Simular e Abrir ULA 1-bit
+▶️ Simular e Abrir ULA 4-bit
+O que Acontece Depois?
+Ao executar a tarefa, um terminal integrado aparecerá no VS Code, executará todos os comandos de compilação e simulação em sequência e, ao final, a janela do GTKWave abrirá automaticamente com as formas de onda para sua análise.
 
 ## Autor:
 
