@@ -5,8 +5,7 @@ Professor: Waldemar Neto.
 # Projeto ULA - Porta AND e Half Adder em VHDLMore actions
 # Projeto ULA - Portas Lógicas, Half Adder e ALU em VHDL
 
-Este projeto faz parte da disciplina **Arquitetura de Computadores** e consiste na implementação de duas unidades funcionais básicas de uma ULA (Unidade Lógica e Aritmética) utilizando a linguagem **VHDL**:
-Este projeto foi desenvolvido como parte da disciplina de Arquitetura de Computadores e tem como objetivo a implementação de blocos fundamentais de uma ULA (Unidade Lógica e Aritmética) utilizando a linguagem VHDL.
+Este projeto faz parte da disciplina **Arquitetura de Computadores** e consiste na implementação de duas unidades funcionais básicas de um processador que nesse caso é a ULA (Unidade Lógica e Aritmética) utilizando a linguagem **VHDL**:
 
 - **Porta AND**: recebe duas entradas lógicas (`a` e `b`) e gera uma saída `y` que representa a conjunção lógica das entradas.
 - **Half Adder**: circuito combinacional que soma dois bits (`a` e `b`) e gera duas saídas:
@@ -31,9 +30,9 @@ Arquitetura_de_Computadores/
 ```
 
 - `and.vhdl` — definição da porta AND
-- `halfAdder.vhdl` — definição do Half Adder
+- `half_adder.vhdl` — definição do Half Adder
 - `and_tb.vhdl` — testbench para a porta AND (opcional)
-- `halfAdder_tb.vhdl` — testbench para o Half Adder
+- `half_adder_tb.vhdl` — testbench para o Half Adder
 
 ## Parte 1 – Porta AND
 
@@ -47,17 +46,20 @@ Arquivos:
 
 ```bash
 # Analisar os arquivos VHDL
-ghdl -a and_gate.vhdl
-ghdl -a halfAdder.vhdl
-ghdl -a halfAdder_tb.vhdl
+ghdl -a and.vhdl
+ghdl -a and_tb.vhdl
+ghdl -a half_adder.vhdl
+ghdl -a half_adder_tb.vhdl
 ## Parte 2 – Meio Somador (Half Adder)
 
 # Elaborar o testbench
-ghdl -e halfAdder_tb
+ghdl -e half_adder_tb
+ghdl -e and_tb
 O meio somador realiza a soma de dois bits (a, b).
 
 # Rodar a simulação gerando arquivo VCD
-ghdl -r halfAdder_tb --vcd=wave.vcd
+ghdl -r and_tb --vcd=wave.vcd
+ghdl -r half_adder_tb --vcd=wave.vcd
 Entradas: a, b
 Saídas:
 - y = a XOR b
@@ -67,6 +69,8 @@ Saídas:
 Arquivos:
 - `half_adder.vhdl`: implementação do meio somador
 - `half_adder_tb.vhdl`: testbench para simulação
+- `and.vhdl`: implementação da porta AND
+- `and_tb.vhdl`: testbench para simulação
 
 🚀 Como Simular com Tarefas do VS Code
 Este projeto está configurado para usar o Task Runner do Visual Studio Code, o que automatiza todo o processo de compilação e simulação com um único comando.
